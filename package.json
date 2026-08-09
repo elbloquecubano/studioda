@@ -1,0 +1,43 @@
+{
+  "name": "cinema-catalog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/next-with-wasm.mjs dev --webpack",
+    "dev:network": "node scripts/next-with-wasm.mjs dev --webpack -H 0.0.0.0",
+    "build": "node scripts/next-with-wasm.mjs build --webpack",
+    "start": "node scripts/next-with-wasm.mjs start",
+    "start:network": "node scripts/next-with-wasm.mjs start -H 0.0.0.0",
+    "lint": "eslint",
+    "hosting:preparar": "node scripts/preparar-hosting.mjs",
+    "db:migrate": "node scripts/migrate-db.mjs",
+    "db:push": "node scripts/prisma.mjs db push",
+    "db:studio": "node scripts/prisma.mjs studio",
+    "db:path": "echo %APPDATA%\\StudiosDA\\dev.db",
+    "crear-admin": "node scripts/crear-admin.mjs"
+  },
+  "dependencies": {
+    "@next/swc-wasm-nodejs": "16.2.6",
+    "@prisma/client": "^5.0.0",
+    "clsx": "^2.1.1",
+    "prisma": "^5.0.0",
+    "framer-motion": "^11.0.0",
+    "lucide-react": "^0.400.0",
+    "next": "16.2.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "swr": "^2.4.2",
+    "tailwind-merge": "^2.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.6",
+    "hyperframes": "^0.7.13",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
